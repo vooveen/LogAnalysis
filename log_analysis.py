@@ -48,4 +48,15 @@ def most_popular_articles(query):
         print '"'+x[0]+'" ---> '+str(x[1])+' views'
 
 
+def most_popular_authors(query):
+    row = connect_db(query)
+    print '\n'
+    print '+-------------------------------------------------------+'
+    print "| Who are the most popular article authors of all time? |"
+    print '+-------------------------------------------------------+'
+    for x in row:
+        print '"'+x[0]+'" ---> '+str(x[1])+' views'
+
+
 most_popular_articles(query1)
+most_popular_authors(query2)
