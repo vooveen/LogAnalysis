@@ -79,5 +79,5 @@ def days_requests_errors(query):
 
 
 most_popular_articles(query1)
-most_popular_authors(queru can install the pycodestyle tool to ty2)
+most_popular_authors(query2)
 days_requests_errors(query3)
