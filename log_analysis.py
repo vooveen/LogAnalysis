@@ -34,7 +34,7 @@ def connect_db(query):
 
         # Activate connection cursor
         cur = conn.cursor()
-    except:
+    except Exception:
         print "Cannot connect to the database"
     # Execute the query
     cur.execute(query)
@@ -79,5 +79,5 @@ def days_requests_errors(query):
 
 
 most_popular_articles(query1)
-most_popular_authors(query2)
+most_popular_authors(queru can install the pycodestyle tool to ty2)
 days_requests_errors(query3)
