@@ -24,6 +24,9 @@ HAVING ROUND( AVG((status != '200 OK')::int * 100), 2)>1;
 
 
 def connect_db(query):
+    """This function takes query as parameter, connects to the db,
+    executes the query and returns back the result of the query
+    """
     try:
         # Connect to the database
         conn = psycopg2.connect("dbname=news")
@@ -32,13 +35,16 @@ def connect_db(query):
         cur = conn.cursor()
     except:
         print "Cannot connect to the database"
-    # Execut the query
+    # Execute the query
     cur.execute(query)
     # Fetch data
     return cur.fetchall()
 
 
 def most_popular_articles(query):
+    """ this function takes the query as parameter, and uses the
+    connect_db() function to fetch data and print it
+    """
     row = connect_db(query)
     print '\n+-------------------------------------------------------+'
     print "| What are the most popular three articles of all time? |"
@@ -48,6 +54,9 @@ def most_popular_articles(query):
 
 
 def most_popular_authors(query):
+    """ this function takes the query as parameter, and uses the
+    connect_db() function to fetch data and print it
+    """
     row = connect_db(query)
     print '\n+-------------------------------------------------------+'
     print "| Who are the most popular article authors of all time? |"
@@ -57,6 +66,9 @@ def most_popular_authors(query):
 
 
 def days_requests_errors(query):
+    """ this function takes the query as parameter, and uses the
+    connect_db() function to fetch data and print it
+    """
     row = connect_db(query)
     print '\n+------------------------------------------------------------+'
     print "| On which days did more than 1% of requests lead to errors? |"
