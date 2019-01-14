@@ -1,4 +1,4 @@
-#!/usr/bin/env Python 2.7.12
+#!/usr/bin/env python
 import psycopg2
 
 query1 = """SELECT title,count(*) AS sum
