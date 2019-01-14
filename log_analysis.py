@@ -40,8 +40,7 @@ def connect_db(query):
 
 def most_popular_articles(query):
     row = connect_db(query)
-    print '\n'
-    print '+-------------------------------------------------------+'
+    print '\n+-------------------------------------------------------+'
     print "| What are the most popular three articles of all time? |"
     print '+-------------------------------------------------------+'
     for x in row:
@@ -50,13 +49,22 @@ def most_popular_articles(query):
 
 def most_popular_authors(query):
     row = connect_db(query)
-    print '\n'
-    print '+-------------------------------------------------------+'
+    print '\n+-------------------------------------------------------+'
     print "| Who are the most popular article authors of all time? |"
     print '+-------------------------------------------------------+'
     for x in row:
         print '"'+x[0]+'" ---> '+str(x[1])+' views'
 
 
+def days_requests_errors(query):
+    row = connect_db(query)
+    print '\n+------------------------------------------------------------+'
+    print "| On which days did more than 1% of requests lead to errors? |"
+    print '+------------------------------------------------------------+'
+    for x in row:
+        print ""+x[0]+' ---> '+str(x[1])+'%'+' errors\n'
+
+
 most_popular_articles(query1)
 most_popular_authors(query2)
+days_requests_errors(query3)
