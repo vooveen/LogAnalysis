@@ -7,6 +7,7 @@ This is a python program to extract information from a newspaper site database
 ## Requirements
 
 Python 2.x.x You can download it from the official site [Pyhton](https://www.python.org/downloads/)
+PostgreSQL You can download it from the official site [PostgreSQL](https://www.postgresql.org/download/)
 psycopg2 Here is instructions to download it [psycopg2](http://initd.org/psycopg/download/)
 
 ## Design of the code
